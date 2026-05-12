@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "palette": [
+        { "slug": "base", "color": "#ffffff", "name": "White" },
+        { "slug": "contrast", "color": "#000000", "name": "Black" },
+        { "slug": "accent", "color": "#e2ff00", "name": "Neon" },
+        { "slug": "grey", "color": "#bfbfc1", "name": "Grey" },
+        { "slug": "dark", "color": "#1a1a1a", "name": "Dark" },
+        { "slug": "off-white", "color": "#f5f5f0", "name": "Off White" },
+        { "slug": "neon-muted", "color": "#c8d400", "name": "Neon Muted" },
+        { "slug": "charcoal", "color": "#4a4a4a", "name": "Charcoal" }
+      ],
+      "background": true,
+      "text": true,
+      "custom": false,
+      "customGradient": false,
+      "defaultPalette": false
+    },
+    "typography": {
+      "fontSizes": [
+        { "slug": "sm", "size": "0.875rem", "name": "Small" },
+        { "slug": "base", "size": "1rem", "name": "Base" },
+        { "slug": "lg", "size": "1.5rem", "name": "Large" },
+        { "slug": "xl", "size": "2.5rem", "name": "XL" },
+        { "slug": "hero", "size": "clamp(15vw, 20vw, 30vw)", "name": "Hero" }
+      ],
+      "customFontSize": true,
+      "lineHeight": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "name": "Inter",
+          "slug": "inter",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontWeight": "100 900",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": ["file:./assets/fonts/InterVariable.woff2"]
+            }
+          ]
+        }
+      ]
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "units": ["px", "rem", "%", "vw", "vh"]
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1200px"
+    }
+  },
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "Main Navigation",
+      "slug": "main-nav"
+    },
+    {
+      "area": "footer",
+      "name": "Footer",
+      "slug": "site-footer"
+    }
+  ],
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)"
+    },
+    "color": {
+      "background": "var(--wp--preset--color--base)",
+      "text": "var(--wp--preset--color--contrast)"
+    },
+    "spacing": {
+      "blockGap": "1rem",
+      "padding": { "top": "0px", "bottom": "0px" }
+    },
+    "blocks": {
+      "core/columns": {
+        "spacing": {
+          "padding": {
+            "left": "5vw",
+            "right": "5vw"
+          }
+        }
+      }
+    }
+  },
+  "version": 3
+}

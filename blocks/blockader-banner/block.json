@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockader/banner",
+  "title": "Blockader Banner",
+  "description": "A split hero banner with content and image.",
+  "category": "design",
+  "icon": "align-pull-left",
+  "keywords": ["hero", "banner", "split", "cta"],
+  "supports": {
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Build Loud."
+    },
+    "content": {
+      "type": "string",
+      "default": "A stripped-back WordPress block theme with custom blocks and bold typography."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonBackgroundColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonHoverTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonHoverBackgroundColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "blockader-editor",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockader/live-rest-search",
+  "title": "Live REST Search",
+  "description": "A live search block that queries posts and pages via the REST API.",
+  "category": "text",
+  "icon": "search",
+  "keywords": ["search", "live", "rest", "posts", "pages"],
+  "supports": {
+    "html": false,
+    "align": ["left", "center", "right"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "padding": true
+    }
+  },
+  "attributes": {
+    "placeholder": {
+      "type": "string",
+      "default": "Search..."
+    },
+    "align": {
+      "type": "string"
+    },
+    "postTypes": {
+      "type": "array",
+      "default": ["post", "page"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "resultLimit": {
+      "type": "number",
+      "default": 5
+    },
+    "heading": {
+      "type": "string",
+      "default": ""
+    },
+    "showType": {
+      "type": "boolean",
+      "default": true
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "excerptLength": {
+      "type": "number",
+      "default": 15
+    }
+  },
+  "editorScript": "blockader-editor",
+  "viewScript": "blockader-live-rest-search"
+}

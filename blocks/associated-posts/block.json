@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blockader/associated-posts",
+  "title": "Associated Posts",
+  "description": "Display editorially selected posts and pages related to this content.",
+  "category": "text",
+  "icon": "admin-links",
+  "keywords": ["related", "posts", "associated", "editorial"],
+  "supports": {
+    "html": false,
+    "align": false,
+    "color": {
+      "background": true,
+      "text": true
+    }
+  },
+  "attributes": {
+    "selectedPosts": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "number" },
+          "type": { "type": "string" }
+        }
+      }
+    },
+    "heading": {
+      "type": "string",
+      "default": "Related Content"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#e2ff00"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "excerptLength": {
+      "type": "number",
+      "default": 20
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "buttonBackgroundColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonHoverBackgroundColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "blockader-editor",
+  "render": "file:./render.php"
+}
