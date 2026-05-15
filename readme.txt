@@ -1,36 +1,63 @@
-== Blockader ==
+# Blockader
 
-Contributors: David Brandon
-Requires at least: 6.9
-Tested up to: 6.9
-Requires PHP: 5.7
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+A stripped-back experimental WordPress block theme focused on bold typography, custom Gutenberg blocks, and modern Full Site Editing workflows.
 
+Built as a learning and portfolio project using:
+- Full Site Editing (FSE)
+- `theme.json`
+- Custom Gutenberg blocks
+- Dynamic and static block rendering
+- REST API integrations
+- Modern WordPress block development tooling
 
-== Description ==
+---
 
-Theme Name: Blockader Theme URI: https://github.com/DB-1984/blockader Description: A high-impact, Brutalist FSE theme for performance-first blogging.
+## Features
 
+### Full Site Editing
+- Custom templates and template parts
+- Pattern-driven layouts
+- Global styles via `theme.json`
+- Responsive typography and spacing system
 
-== Changelog ==
+### Custom Gutenberg Blocks
 
-= 1.0.0 =
-* Initial release
+#### Banner Block (`blockader/banner`)
+A dynamic split-layout hero/banner block featuring:
+- Editable heading/content/button
+- Inspector-controlled button colours
+- Server-side rendering with `render.php`
+- Theme-aware styling via CSS variables
 
+#### Live REST Search Block
+A custom live-search block powered by the WordPress REST API featuring:
+- Live post/page querying
+- Dynamic search results
+- Debounced frontend requests
+- Custom styled results UI
 
-== Copyright ==
+#### Associated Posts Block
+Displays context-aware related content with:
+- Featured images
+- Post type labels
+- Responsive card layouts
 
-Blockader WordPress Theme, (C) 2026 David Brandon
-Blockader is distributed under the terms of the GNU GPL.
+---
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
+## Tech Stack
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+- WordPress
+- Gutenberg Block API
+- JavaScript / React
+- PHP
+- CSS
+- `@wordpress/scripts`
 
+---
+
+## Development
+
+### Install dependencies
+
+```bash
+npm install
