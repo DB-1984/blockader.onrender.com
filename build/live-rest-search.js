@@ -1,1 +1,69 @@
-!function(){const e=document.querySelectorAll(".live-rest-search-block");e.length&&e.forEach(function(e){const t=e.querySelector(".live-rest-search-input"),s=e.querySelector(".live-rest-search-results");if(!t||!s)return;const n=JSON.parse(e.dataset.postTypes||'["post","page"]'),r=parseInt(e.dataset.resultLimit||5),a="true"===e.dataset.showType,i="true"===e.dataset.showExcerpt,l=parseInt(e.dataset.excerptLength||15);let c;t.addEventListener("input",function(){clearTimeout(c);const e=t.value.trim();e.length<2?s.innerHTML="":c=setTimeout(function(){!async function(e){s.innerHTML='<p class="live-rest-search-loading">Searching...</p>';try{const t=n.map(t=>fetch(`/wp-json/wp/v2/${"post"===t?"posts":"pages"}?search=${encodeURIComponent(e)}&per_page=${r}&_fields=id,title,excerpt,link,type`).then(e=>e.json())),c=(await Promise.all(t)).flat();if(!c.length)return void(s.innerHTML='<p class="live-rest-search-empty">No results found.</p>');const p=c.map(e=>`\n            <a href="${e.link}" class="live-rest-search-result">\n              ${a?`<span class="result-type">${e.type}</span>`:""}\n              <div class="result-inner">\n                <span class="result-title">${e.title.rendered}</span>\n                ${i?`<span class="result-excerpt">${function(e,t){return e.replace(/<[^>]+>/g,"").trim().split(/\s+/).slice(0,t).join(" ")+"..."}(e.excerpt.rendered,l)}</span>`:""}\n              </div>\n            </a>\n          `).join("");s.innerHTML=`<div class="live-rest-search-results-inner">${p}</div>`}catch(e){s.innerHTML='<p class="live-rest-search-error">Something went wrong. Please try again.</p>'}}(e)},300)})})}();
+/******/ (() => { // webpackBootstrap
+/*!***************************************!*\
+  !*** ./assets/js/live-rest-search.js ***!
+  \***************************************/
+(function () {
+  // Find all instances of the block on the page
+  const blocks = document.querySelectorAll(".live-rest-search-block");
+  if (!blocks.length) return;
+  blocks.forEach(function (block) {
+    const input = block.querySelector(".live-rest-search-input");
+    const results = block.querySelector(".live-rest-search-results");
+    if (!input || !results) return;
+
+    // Read block attributes from data attributes on the wrapper
+    const postTypes = JSON.parse(block.dataset.postTypes || '["post","page"]');
+    const resultLimit = parseInt(block.dataset.resultLimit || 5);
+    const showType = block.dataset.showType === "true";
+    const showExcerpt = block.dataset.showExcerpt === "true";
+    const excerptLength = parseInt(block.dataset.excerptLength || 15);
+    let debounceTimer;
+    input.addEventListener("input", function () {
+      clearTimeout(debounceTimer);
+      const query = input.value.trim();
+      if (query.length < 2) {
+        results.innerHTML = "";
+        return;
+      }
+      debounceTimer = setTimeout(function () {
+        fetchResults(query);
+      }, 300);
+    });
+    async function fetchResults(query) {
+      results.innerHTML = '<p class="live-rest-search-loading">Searching...</p>';
+      try {
+        // Build fetch promises for each post type
+        const requests = postTypes.map(type => fetch(`/wp-json/wp/v2/${type === "post" ? "posts" : "pages"}?search=${encodeURIComponent(query)}&per_page=${resultLimit}&_fields=id,title,excerpt,link,type`).then(res => res.json()));
+        const responses = await Promise.all(requests);
+
+        // Flatten results from all post types into one array
+        const allResults = responses.flat();
+        if (!allResults.length) {
+          results.innerHTML = '<p class="live-rest-search-empty">No results found.</p>';
+          return;
+        }
+
+        // Trim excerpt to excerptLength words
+        function trimExcerpt(html, length) {
+          const text = html.replace(/<[^>]+>/g, "").trim();
+          return text.split(/\s+/).slice(0, length).join(" ") + "...";
+        }
+        const html = allResults.map(post => `
+            <a href="${post.link}" class="live-rest-search-result">
+              ${showType ? `<span class="result-type">${post.type}</span>` : ""}
+              <div class="result-inner">
+                <span class="result-title">${post.title.rendered}</span>
+                ${showExcerpt ? `<span class="result-excerpt">${trimExcerpt(post.excerpt.rendered, excerptLength)}</span>` : ""}
+              </div>
+            </a>
+          `).join("");
+        results.innerHTML = `<div class="live-rest-search-results-inner">${html}</div>`;
+      } catch (error) {
+        results.innerHTML = '<p class="live-rest-search-error">Something went wrong. Please try again.</p>';
+      }
+    }
+  });
+})();
+/******/ })()
+;
+//# sourceMappingURL=live-rest-search.js.map

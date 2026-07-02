@@ -82,7 +82,7 @@
         },
         {
           "slug": "hero",
-          "size": "clamp(15vw, 22vw, 30vw)",
+          "size": "clamp(15vw, 12vw, 30vw)",
           "name": "Hero"
         }
       ],
@@ -98,9 +98,7 @@
               "fontWeight": "100 900",
               "fontStyle": "normal",
               "fontDisplay": "swap",
-              "src": [
-                "file:./assets/fonts/InterVariable.woff2"
-              ]
+              "src": ["file:./assets/fonts/InterVariable.woff2"]
             }
           ]
         }
@@ -109,13 +107,7 @@
     "spacing": {
       "margin": true,
       "padding": true,
-      "units": [
-        "px",
-        "rem",
-        "%",
-        "vw",
-        "vh"
-      ]
+      "units": ["px", "rem", "%", "vw", "vh"]
     },
 
     "layout": {
