@@ -31,6 +31,12 @@ function blockader_register_assets() {
         $editor_asset[ 'version' ]
     );
 
+    wp_add_inline_script(
+        'blockader-editor',
+        'window.blockaderTheme = window.blockaderTheme || {}; window.blockaderTheme.themeUrl = ' . wp_json_encode( get_theme_file_uri() ) . ';',
+        'before'
+    );
+
     $search_asset = include get_theme_file_path( 'build/live-rest-search.asset.php' );
 
     wp_register_script(

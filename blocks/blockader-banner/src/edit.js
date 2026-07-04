@@ -10,6 +10,24 @@ import {
 } from "@wordpress/block-editor";
 import { Button } from "@wordpress/components";
 
+const resolveThemeFileUrl = (url) => {
+  if (!url) {
+    return "";
+  }
+
+  if (!url.startsWith("file:./")) {
+    return url;
+  }
+
+  const themeUrl = window.blockaderTheme?.themeUrl;
+
+  if (!themeUrl) {
+    return url;
+  }
+
+  return url.replace("file:./", `${themeUrl}/`);
+};
+
 export default function Edit({ attributes, setAttributes }) {
   const {
     heading,
@@ -23,6 +41,8 @@ export default function Edit({ attributes, setAttributes }) {
     buttonHoverBackgroundColor,
     buttonHoverTextColor,
   } = attributes;
+
+  const resolvedImageUrl = resolveThemeFileUrl(imageUrl);
 
   const blockProps = useBlockProps({
     className: "blockader-banner",
@@ -66,6 +86,7 @@ export default function Edit({ attributes, setAttributes }) {
           ]}
         />
       </InspectorControls>
+
       <section {...blockProps}>
         <div className="blockader-banner__inner">
           <div className="blockader-banner__content">
@@ -103,7 +124,7 @@ export default function Edit({ attributes, setAttributes }) {
           <div className="blockader-banner__media">
             {imageUrl ? (
               <>
-                <img src={imageUrl} alt={imageAlt} />
+                <img src={resolvedImageUrl} alt={imageAlt || ""} />
 
                 <MediaUploadCheck>
                   <MediaUpload
