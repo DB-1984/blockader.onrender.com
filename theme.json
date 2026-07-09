@@ -130,9 +130,9 @@
       "blockGap": "1rem",
       "padding": {
         "top": "0px",
-        "right": "2rem",
+        "right": "1rem",
         "bottom": "0px",
-        "left": "2rem"
+        "left": "1rem"
       }
     },
 
