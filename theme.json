@@ -107,7 +107,14 @@
     "spacing": {
       "margin": true,
       "padding": true,
-      "units": ["px", "rem", "%", "vw", "vh"]
+      "units": ["px", "rem", "%", "vw", "vh"],
+      "spacingSizes": [
+        {
+          "slug": "hero-padding",
+          "size": "clamp(1rem, 5vw, 3rem)",
+          "name": "Hero Padding"
+        }
+      ]
     },
 
     "layout": {
@@ -181,17 +188,6 @@
         "typography": {
           "fontSize": "1rem",
           "lineHeight": "1.7"
-        }
-      }
-    },
-
-    "blocks": {
-      "core/columns": {
-        "spacing": {
-          "padding": {
-            "left": "5vw",
-            "right": "5vw"
-          }
         }
       }
     }

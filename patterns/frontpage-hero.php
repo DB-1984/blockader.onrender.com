@@ -13,9 +13,9 @@
     <div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
     <!-- /wp:spacer -->
 
-    <!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"front-hero","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
+    <!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"front-hero","style":{"spacing":{"padding":{"right":"var:preset|spacing|hero-padding","left":"var:preset|spacing|hero-padding"}}}} -->
     <div class="wp-block-columns alignwide are-vertically-aligned-center front-hero"
-        style="padding-right:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+        style="padding-right:var(--wp--preset--spacing--hero-padding);padding-left:var(--wp--preset--spacing--hero-padding)">
 
         <!-- wp:column {"verticalAlignment":"center"} -->
         <div class="wp-block-column is-vertically-aligned-center">
