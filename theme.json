@@ -82,7 +82,7 @@
         },
         {
           "slug": "hero",
-          "size": "clamp(15vw, 12vw, 30vw)",
+          "size": "50cqi",
           "name": "Hero"
         }
       ],

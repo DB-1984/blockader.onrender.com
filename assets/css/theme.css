@@ -4,6 +4,14 @@
   line-height: 0.7;
 }
 
+.front-hero .wp-block-column {
+  container-type: inline-size;
+}
+
+h2 {
+  text-wrap: balance;
+}
+
 .hero-image {
   padding: 2vw;
 }
