@@ -1,11 +1,17 @@
 /* MAIN THEME STYLES */
 .has-hero-font-size {
-  -webkit-text-stroke-width: 1.5vw;
+  -webkit-text-stroke-width: 5cqi;
   line-height: 0.7;
 }
 
 .front-hero .wp-block-column {
   container-type: inline-size;
+}
+
+@media (max-width: 768px) {
+  .has-hero-font-size {
+    font-size: 30cqi !important;
+  }
 }
 
 h2 {
@@ -288,6 +294,10 @@ h2 {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+div#modal-1 {
+  padding: 4vw
 }
 
 .wp-block-navigation__responsive-container-open svg {
