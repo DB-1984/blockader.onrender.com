@@ -1,7 +1,16 @@
 /* MAIN THEME STYLES */
 .has-hero-font-size {
-  -webkit-text-stroke-width: 5cqi;
+  -webkit-text-stroke-width: 4cqi;
   line-height: 0.7;
+}
+
+h3.wp-block-heading h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 strong {
+  letter-spacing: -.055em
 }
 
 .front-hero .wp-block-column {
@@ -12,6 +21,10 @@
   .has-hero-font-size {
     font-size: 30cqi !important;
   }
+}
+
+.wp-block-post-title :where(a) {
+  font-weight: 600
 }
 
 h2 {
@@ -80,7 +93,7 @@ h2 {
 .single-content {
   max-width: 760px;
   margin-inline: auto;
-  padding-block: 4rem;
+  padding-block: 2rem;
 }
 
 .single-content p {
@@ -158,14 +171,15 @@ h2 {
 
 /* ASSOC. POSTS/PAGES */
 .associated-posts-block {
-  box-shadow: 3px 3px 20px #ccc;
+  border: 9px solid black;
   transition: box-shadow 0.15s ease;
   padding: 2rem;
   background: transparent;
+  transition: all, 0.3s ease-in-out;
 }
 
 .associated-posts-block:hover {
-  box-shadow: none;
+  transform: translateY(-10px)
 }
 
 .associated-posts-block h3 {

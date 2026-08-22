@@ -2,7 +2,7 @@
 /**
  * Title: Front Page Hero
  * Slug: blockader/frontpage-hero
- * Inserter: false
+ * Categories: featured
  */
 ?>
 
