@@ -1,7 +1,17 @@
 /* MAIN THEME STYLES */
 .has-hero-font-size {
-  -webkit-text-stroke-width: 4cqi;
   line-height: 0.7;
+  line-height: 0.65;
+  font-weight: 900;
+  letter-spacing: -1.5rem;
+  font-family: var(--wp--preset--font-family--anurati);
+  -webkit-text-stroke-width: thin;
+}
+
+p.hero-tagline {
+  line-height: 2;
+  padding: 2em;
+  opacity: 0.85;
 }
 
 h3.wp-block-heading h3 {
@@ -9,7 +19,7 @@ h3.wp-block-heading h3 {
   margin-bottom: 0.75rem;
 }
 
-h3 strong {
+h3 {
   letter-spacing: -.055em
 }
 
@@ -19,7 +29,7 @@ h3 strong {
 
 @media (max-width: 768px) {
   .has-hero-font-size {
-    font-size: 30cqi !important;
+    font-size: 40cqi !important;
   }
 }
 
@@ -33,6 +43,13 @@ h2 {
 
 .hero-image {
   padding: 2vw;
+}
+
+.front-page-hero {
+  background-image: url("../images/Ozzp5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .wp-block-quote,
@@ -94,11 +111,6 @@ h2 {
   max-width: 760px;
   margin-inline: auto;
   padding-block: 2rem;
-}
-
-.single-content p {
-  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
-  line-height: 1.65;
 }
 
 .single-footer {
@@ -174,7 +186,7 @@ h2 {
   border: 9px solid black;
   transition: box-shadow 0.15s ease;
   padding: 2rem;
-  background: transparent;
+  background: #1f1f1f;
   transition: all, 0.3s ease-in-out;
 }
 

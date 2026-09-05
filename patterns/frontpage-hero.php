@@ -7,7 +7,7 @@
 ?>
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
+<div class="wp-block-group front-page-hero">
 
     <!-- wp:spacer {"height":"25px"} -->
     <div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
