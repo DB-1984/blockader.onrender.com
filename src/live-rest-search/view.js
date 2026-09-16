@@ -69,21 +69,25 @@
         const html = allResults
           .map(
             (post) => `
-            <a href="${post.link}" class="live-rest-search-result">
-              ${showType ? `<span class="result-type">${post.type}</span>` : ""}
-              <div class="result-inner">
-                <span class="result-title">${post.title.rendered}</span>
+              <a href="${post.link}" class="live-rest-search-result">
                 ${
-                  showExcerpt
-                    ? `<span class="result-excerpt">${trimExcerpt(
-                        post.excerpt.rendered,
-                        excerptLength
-                      )}</span>`
+                  showType
+                    ? `<span class="result-type">${post.type}</span>`
                     : ""
                 }
-              </div>
-            </a>
-          `
+                <div class="result-inner">
+                  <span class="result-title">${post.title.rendered}</span>
+                  ${
+                    showExcerpt
+                      ? `<span class="result-excerpt">${trimExcerpt(
+                          post.excerpt.rendered,
+                          excerptLength
+                        )}</span>`
+                      : ""
+                  }
+                </div>
+              </a>
+            `
           )
           .join("");
 

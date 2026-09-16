@@ -6,7 +6,12 @@
   "description": "Display editorially selected posts and pages related to this content.",
   "category": "text",
   "icon": "admin-links",
-  "keywords": ["related", "posts", "associated", "editorial"],
+  "keywords": [
+    "related",
+    "posts",
+    "associated",
+    "editorial"
+  ],
   "supports": {
     "html": false,
     "align": false,
@@ -22,8 +27,12 @@
       "items": {
         "type": "object",
         "properties": {
-          "id": { "type": "number" },
-          "type": { "type": "string" }
+          "id": {
+            "type": "number"
+          },
+          "type": {
+            "type": "string"
+          }
         }
       }
     },
@@ -64,6 +73,6 @@
       "default": ""
     }
   },
-  "editorScript": "blockader-editor",
+  "editorScript": "file:./index.js",
   "render": "file:./render.php"
 }

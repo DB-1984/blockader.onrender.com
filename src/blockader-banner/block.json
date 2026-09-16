@@ -60,6 +60,6 @@
       "default": ""
     }
   },
-  "editorScript": "blockader-editor",
+  "editorScript": "file:./index.js",
   "render": "file:./render.php"
 }

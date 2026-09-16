@@ -54,6 +54,6 @@
       "default": 15
     }
   },
-  "editorScript": "blockader-editor",
-  "viewScript": "blockader-live-rest-search"
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js"
 }

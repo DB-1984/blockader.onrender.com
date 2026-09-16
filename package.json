@@ -6,8 +6,8 @@
   "license": "ISC",
   "keywords": [],
   "scripts": {
-    "build": "wp-scripts build src/index.js assets/js/live-rest-search.js",
-    "start": "wp-scripts start src/index.js assets/js/live-rest-search.js"
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
   },
   "dependencies": {
     "@wordpress/scripts": "^32.0.0"
