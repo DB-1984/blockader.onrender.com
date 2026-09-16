@@ -18,7 +18,7 @@
           "name": "Black"
         },
         {
-          "slug": "accent",
+          "slug": "neon",
           "color": "#e2ff00",
           "name": "Neon"
         },
@@ -144,8 +144,8 @@
     },
 
     "color": {
-      "background": "var(--wp--preset--color--base)",
-      "text": "var(--wp--preset--color--contrast)"
+      "background": "var(--wp--preset--color--charcoal)",
+      "text": "var(--wp--preset--color--base)"
     },
 
     "spacing": {
@@ -168,7 +168,16 @@
     },
 
     "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        }
+      },
+
       "h1": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        },
         "typography": {
           "fontSize": "clamp(3rem, 8vw, 7rem)",
           "lineHeight": "1.3",
@@ -177,6 +186,9 @@
       },
 
       "h2": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        },
         "typography": {
           "fontSize": "clamp(2.25rem, 6vw, 5rem)",
           "lineHeight": "1.3",
@@ -185,6 +197,9 @@
       },
 
       "h3": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        },
         "typography": {
           "fontSize": "clamp(1.75rem, 4vw, 3rem)",
           "lineHeight": "1.3",
@@ -193,6 +208,9 @@
       },
 
       "h4": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        },
         "typography": {
           "fontSize": "1.5rem",
           "lineHeight": "1.2",
@@ -201,6 +219,9 @@
       },
 
       "h5": {
+        "color": {
+          "text": "var(--wp--preset--color--neon)"
+        },
         "typography": {
           "fontSize": "1.2rem",
           "lineHeight": "1.3",
