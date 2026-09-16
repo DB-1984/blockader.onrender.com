@@ -82,7 +82,7 @@
         },
         {
           "slug": "hero",
-          "size": "50cqi",
+          "size": "min(25vw, 45cqi)",
           "name": "Hero"
         }
       ],
