@@ -101,20 +101,6 @@
               "src": ["file:./assets/fonts/InterVariable.woff2"]
             }
           ]
-        },
-        {
-          "name": "Anurati",
-          "slug": "anurati",
-          "fontFamily": "\"Anurati\", sans-serif",
-          "fontFace": [
-            {
-              "fontFamily": "Anurati",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "fontDisplay": "swap",
-              "src": ["file:./assets/fonts/Anurati-Regular.woff2"]
-            }
-          ]
         }
       ]
     },
